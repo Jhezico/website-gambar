@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Gambaran</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <section class="canvas-menu">
+      <div class="row">
+        <label class="title">Bentuk</label>
+        <ul class="menu-utama">
+          <li class="menu-icon tool" id="kotak">
+            <img src="icons/persegi.svg">
+            <span>Kotak</span>
+          </li>
+          <li class="menu-icon tool" id="lingkaran">
+            <img src="icons/lingkaran.svg">
+            <span>Lingkaran</span>
+          </li>
+          <li class="menu-icon tool" id="segitiga">
+            <img src="icons/segitiga.svg">
+            <span>Segitiga</span>
+          </li>
+          <li class="menu-icon" id="">
+            <input type="checkbox" id="warna-dalam">
+            <label for="warna-dalam">Warna Dalam</label>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <label class="title">Pengaturan</label>
+        <ul class="menu-utama">
+          <li class="menu-icon active tool" id="brush">
+            <img src="icons/brush.svg">
+            <span>Brush</span>
+          </li>
+          <li class="menu-icon tool" id="penghapus">
+            <img src="icons/penghapus.svg">
+            <span>Penghapus</span>
+          </li>
+          <li class="menu-icon">
+            <input type="range" id="ukuran-slider" min="1" max="30" value="5">
+          </li>
+        </ul>
+      </div>
+      <div class="row warna">
+        <label class="title">Warna</label>
+        <ul class="menu-utama">
+          <li class="menu-icon"></li>
+          <li class="menu-icon selected"></li>
+          <li class="menu-icon"></li>
+          <li class="menu-icon"></li>
+          <li class="menu-icon">
+            <input type="color" id="pilih-warna" value="#4a98f7">
+          </li>
+        </ul>
+      </div>
+      <div class="row tombol">
+        <button class="reset-canvas">Bersihkan Canvas</button>
+        <button class="simpan-gambar">Simpan Gambar</button>
+      </div>
+    </section>
+    <section class="canvas">
+      <canvas></canvas>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

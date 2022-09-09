@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #222;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
+  max-width: 1050px;
+}
+
+section {
+  background: #fff;
+  border-radius: 7px;
+}
+
+.canvas-menu {
+  width: 210px;
+  padding: 15px 22px 0;
+}
+
+.canvas-menu .row {
+  margin-bottom: 20px;
+}
+
+.row .menu-utama {
+  list-style: none;
+  margin: 10px 0 0 5px;
+}
+
+.row .menu-utama .menu-icon {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.menu-icon:is(:hover, .active) img {
+  filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+
+.menu-icon :where(span, label) {
+  color: #5A6168;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.menu-icon:is(:hover, .active) :where(span, label) {
+  color: #4a98f7;
+}
+
+.menu-icon #warna-dalam {
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+}
+
+#warna-dalam:checked~label {
+  color: #4a98f7;
+}
+
+.menu-icon #ukuran-slider {
+  width: 100%;
+  height: 5px;
+  margin-top: 10px;
+}
+
+.warna .menu-utama {
+  display: flex;
+  justify-content: space-between;
+}
+
+.warna .menu-icon {
+  height: 20px;
+  width: 20px;
+  background: red;
+  border-radius: 50%;
+  margin-top: 3px;
+  position: relative;
+}
+
+.warna .menu-icon:nth-child(1) {
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+}
+
+.warna .menu-icon:nth-child(2) {
+  background-color: #000;
+}
+
+.warna .menu-icon:nth-child(3) {
+  background-color: #E02020;
+}
+
+.warna .menu-icon:nth-child(4) {
+  background-color: #6DD400;
+}
+
+.warna .menu-icon:nth-child(5) {
+  background-color: #4a98f7;
+}
+
+.warna .menu-icon.selected::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 12px;
+  width: 12px;
+  background: inherit;
+  border-radius: inherit;
+  border: 2px solid #fff;
+  transform: translate(-50%, -50%);
+}
+
+.warna .menu-icon:first-child.selected:before {
+  border-color: #ccc;
+}
+
+.menu-icon #pilih-warna {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.tombol button {
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 11px 0;
+  font-size: 0.9rem;
+  margin-bottom: 13px;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tombol .reset-canvas {
+  color: #6c757d;
+  border: 1px solid #6c757d;
+  transition: all 0.3s ease;
+}
+
+.reset-canvas:hover {
+  color: #fff;
+  background: #6c757d;
+}
+
+.tombol .simpan-gambar {
+  background: #4a98f7;
+  border: 1px solid #4a98f7;
+}
+
+.canvas {
+  flex: 1;
+}
+
+.canvas canvas {
+  width: 100%;
+  height: 100%;
+}
