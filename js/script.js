@@ -1,7 +1,8 @@
 if (window.screen.width < 1280 && window.screen.height < 768) {
   window.location.pathname = '/website-gambar/phone.html';
-  console.log(window.location.href);
 } else {
+  window.location.pathname = '/website-gambar/index.html';
+  console.log(window.location.href);
   const canvas = document.querySelector("canvas"),
     toolBtns = document.querySelectorAll(".tool"),
     fillColor = document.querySelector("#warna-dalam"),
