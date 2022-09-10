@@ -1,7 +1,6 @@
 if (window.screen.width < 1280 && window.screen.height < 768) {
-  window.location.replace("https://jhezico.github.io/website-gambar/phone.html");
+  alert('Website ini tidak bisa bekerja saat dibuka melalui gawai');
 } else {
-  window.location.replace("https://jhezico.github.io/website-gambar");
   const canvas = document.querySelector("canvas"),
     toolBtns = document.querySelectorAll(".tool"),
     fillColor = document.querySelector("#warna-dalam"),
