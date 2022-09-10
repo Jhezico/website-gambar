@@ -1,5 +1,5 @@
-if (window.screen.width < 1280 && window.screen.height < 768) {
-  alert('Website ini tidak bisa bekerja saat dibuka melalui gawai');
+if (window.screen.width < 1280 || window.screen.height < 768) {
+  window.location.pathname = '/phone.html';
 } else {
   const canvas = document.querySelector("canvas"),
     toolBtns = document.querySelectorAll(".tool"),
@@ -113,4 +113,5 @@ if (window.screen.width < 1280 && window.screen.height < 768) {
   canvas.addEventListener("mouseup", () => isDrawing = false);
 }
 
-console.log(window.location.href);
+
+
