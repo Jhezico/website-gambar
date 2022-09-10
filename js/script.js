@@ -1,7 +1,7 @@
 if (window.screen.width < 1280 && window.screen.height < 768) {
-  window.location.href = 'https://jhezico.github.io/website-gambar/phone.html/';
+  window.location.replace("https://jhezico.github.io/website-gambar/phone.html");
 } else {
-  window.location.href = 'https://jhezico.github.io/website-gambar/';
+  window.location.replace("https://jhezico.github.io/website-gambar");
   const canvas = document.querySelector("canvas"),
     toolBtns = document.querySelectorAll(".tool"),
     fillColor = document.querySelector("#warna-dalam"),
