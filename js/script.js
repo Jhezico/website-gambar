@@ -1,5 +1,5 @@
 if (window.screen.width < 1280 && window.screen.height < 768) {
-  window.location.pathname = 'website-gambar/phone.html';
+  window.location.pathname = '/website-gambar/phone.html';
   console.log(window.location.href);
 } else {
   const canvas = document.querySelector("canvas"),
